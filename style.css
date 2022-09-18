@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+body,*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    background: #333;
+    color: #eee;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+h2{
+    margin: 15vh auto;
+    text-align: center;
+    font-size: 2rem;
+}
+ul{
+    box-shadow: 0 0 3px #eee;
+    width: 60vw;
+    overflow-x: hidden;
+    margin: 2rem auto;
+    counter-reset: number;
+}
+li{
+    list-style: none;
+    counter-increment: number;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 0 1px #eee;
+    text-align: center;
+    font-size: 2rem;
+    margin-left: -100%;
+    transition: translate 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: calc(100ms * (var(--order)));
+}
+ul:hover li{
+    translate: 100% 0;
+}
